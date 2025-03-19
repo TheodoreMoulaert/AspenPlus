@@ -10,7 +10,7 @@ Ce projet se concentre sur la séparation d'un flux d'alimentation de **10000 kg
 
 ## Étapes du Projet
 
-Le projet est structuré en plusieurs étapes, comme décrit dans l'énoncé :
+Le projet est structuré en plusieurs étapes :
 
 1.  **Choix d’un modèle thermodynamique adéquat** : Sélection d'un modèle thermodynamique approprié pour traiter la séparation éthanol-eau.
 2.  **Vérification du modèle thermodynamique** :
