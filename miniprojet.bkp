@@ -1,4 +1,4 @@
-MM "37.0" FLAVOR "NO" VERSION "37.0" DATETIME "Thu Mar 27 13:06:30 2025" 
+MM "37.0" FLAVOR "NO" VERSION "37.0" DATETIME "Thu Apr  3 13:19:10 2025" 
 MACHINE "WIN-NT/VC"  ; 
 startlibrary
 version1
@@ -32,37 +32,45 @@ User Models
 active
 endlibrary
 ; 
-1
+2
 >VERSION 0
 SHORTCUT
 DSTWU
 Built-In
 DSTWU
+>VERSION 0
+RADFRAC
+RadFrac
+Built-In
+RADFRAC
 ? SETUP MAIN ? \ "RUN-CLASS" RUN-CLASS = FLOWSHEET \ \ SIMULATE INTERACTIVE
- = NO MOLEFLOW = MOLEFLOW \ ? SETUP GLOBAL ? \ "IN-UNITS" INSET = METCBAR \ ? 
-SETUP DIAGNOSTICS ? ? SETUP "SIM-OPTIONS" ? ; "METCBAR_MOLE" ; ? SETUP 
-"UNITS-SET" METCBAR ? \ DESCRIPTION DESCRIPTION = "User-defined units set" \ 
-\ MMLOCAL \ \ UNITSET BASESET = MET ( 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 5 
-3 4 3 3 3 3 3 3 3 3 4 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 5 3 3 3 3 3 3 5 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+ = NO MOLEFLOW = MOLEFLOW VISITED = 1 \ ? SETUP GLOBAL ? \ "IN-UNITS" INSET
+ = PROJET \ ? SETUP DIAGNOSTICS ? ? SETUP "SIM-OPTIONS" ? ; "PROJET_MOLE" ; ? 
+SETUP "MODEL-OPTION" ? ; "PROJET_MOLE" ; ? SETUP "UNITS-SET" METCBAR ? \ 
+DESCRIPTION DESCRIPTION = "User-defined units set" \ \ MMLOCAL \ \ UNITSET 
+BASESET = MET ( 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 5 3 4 3 3 3 3 3 3 3 3 4 
 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-7 3 3 3 3 3 3 3 3 ) \ ? SETUP "UNITS-SET" PROJET ? \ DESCRIPTION DESCRIPTION
- = "User-defined units set" \ \ MMLOCAL \ \ UNITSET BASESET = MET ( 3 3 3 3 3 
-3 3 3 3 3 3 3 14 3 3 3 3 3 3 15 3 4 3 3 3 3 3 3 3 3 4 3 3 3 3 3 3 3 3 3 3 3 3 
-3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 5 3 3 3 3 3 3 5 
+3 3 3 3 5 3 3 3 3 3 3 5 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 7 3 3 3 3 3 3 3 3 ) \ 
+? SETUP "UNITS-SET" PROJET ? \ DESCRIPTION DESCRIPTION = 
+"User-defined units set" \ \ MMLOCAL \ \ UNITSET BASESET = MET ( 3 3 3 3 3 3 
+3 3 3 3 3 3 14 3 3 3 3 3 3 15 3 4 3 3 3 3 3 3 3 3 4 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 5 3 3 3 3 3 3 5 3 
 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 7 3 3 3 3 3 3 3 3 ) \ ? "DATA-SERVICE" ? ? 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 7 3 3 3 3 3 3 3 3 ) \ ? "DATA-SERVICE" ? ? 
 DATABANKS ? \ DATABANKS \ ? COMPONENTS MAIN ? \ COMPONENTS CID = ETHANOL 
 ANAME = C2H6O-2 OUTNAME = ETHANOL DBNAME1 = "ETHANOL" ANAME1 = "C2H6O-2" /  
 CID = H2O ANAME = H2O OUTNAME = H2O DBNAME1 = "WATER" ANAME1 = "H2O" \ ? 
-COMPONENTS "ADA/PCS" "LE-PROP-DATA" ? ; "METCBAR_MOLE" ; ? COMPONENTS "ADA/PCS" 
-"ADA-SETUP" ? ? COMPONENTS "COMP-LIST" GLOBAL ? ? COMPONENTS "UNIFAC-GROUP" ? 
-? SOLVE ? \ "RUN-MODE" MODE = SIM \ ? "DYN-OPTIONS" ? ? FLOWSHEET GLOBAL ? \ 
-BLOCK BLKID = SHORTCUT BLKTYPE = DSTWU MDLTYPE = "DSTWU" IN = ( FEED M0-1 ) 
-OUT = ( DISTILAT M0-1 RESIDU M1-2 ) \ ? PROPERTIES MAIN ? \ GPROPERTIES 
-GPPROCTYPE = ALL GBASEOPSET = NRTL GOPSETNAME = NRTL PARCON = -2 \ ? 
-PROPERTIES COMPARE ? ? PROPERTIES "OPTION-SETS" NRTL ? \ PARAM BASE = NRTL \ 
-? PROPERTIES "NC-PROPS" ? ? PROPERTIES "USER-PROPS" ? \ ALLOWSYSTEM 
+COMPONENTS "ADA/PCS" "LE-PROP-DATA" ? ; "PROJET_MOLE" ; ? COMPONENTS "ADA/PCS" 
+"PETRO-PROP" ? ? COMPONENTS "ADA/PCS" "ADA-SETUP" ? ? COMPONENTS "COMP-LIST" 
+GLOBAL ? ? COMPONENTS "UNIFAC-GROUP" ? ? SOLVE ? \ "RUN-MODE" MODE = SIM \ ? 
+"DYN-OPTIONS" ? ? FLOWSHEET GLOBAL ? \ BLOCK BLKID = SHORTCUT BLKTYPE = DSTWU 
+MDLTYPE = "DSTWU" IN = ( FEED M0-1 ) OUT = ( DISTILAT M0-1 RESIDU M1-2 ) \ \ 
+BLOCK BLKID = RADFRAC BLKTYPE = RADFRAC MDLTYPE = "RadFrac" IN = ( RADFEED 
+M0-1 ) OUT = ( RADRESID M2-3 RADDIST M1-2 ) \ ? PROPERTIES MAIN ? \ 
+GPROPERTIES GPPROCTYPE = ALL GBASEOPSET = NRTL GOPSETNAME = NRTL PARCON = 
+-2 \ ? PROPERTIES COMPARE ? ? PROPERTIES "OPTION-SETS" NRTL ? \ PARAM BASE = 
+NRTL \ ? PROPERTIES "NC-PROPS" ? ? PROPERTIES "USER-PROPS" ? \ ALLOWSYSTEM 
 SYSALLOWED = NO \ ? PROPERTIES "MOLEC-STRUCT" ETHANOL ? ? PROPERTIES 
 "MOLEC-STRUCT" H2O ? ? PROPERTIES REGPAR ? \ FRED REGCASE = "R-DR-1" PARNAME
  = "NRTL" COMPI = H2O COMPJ = ETHANOL VALUE = ( "3.42298651E+00" 
@@ -641,45 +649,114 @@ PROPLIST = "Y_ETHANOL" PROPLABEL = ETHANOL VALUE = "1%" <0> <0> /  2 PROPLIST
 ) \ ? POLYMERS ? ? "STREAM-CLASS" SUBSTREAMS ? \ DEF-SUBS-CLA SUBSTREAMS = 
 MIXED \ \ DEF-SUBS-CLA SUBSTREAMS = CISOLID \ \ DEF-SUBS-CLA SUBSTREAMS = NC 
 \ \ DEF-SUBS-CLA SUBSTREAMS = NCPSD \ \ DEF-SUBS-CLA SUBSTREAMS = CIPSD \ ? 
-"STREAM-NAMES" ? ? "STREAM-GROUP" All ? \ DESCRIPTION DESCRIPTION = 
-"All streams" \ ? "STREAM-GROUP" Boundary ? \ DESCRIPTION DESCRIPTION = 
-"Boundary streams" \ ? "STREAM-GROUP" Charge ? \ DESCRIPTION DESCRIPTION = 
-"Charge streams" \ ? "STREAM-GROUP" Feeds ? \ DESCRIPTION DESCRIPTION = 
-"Feed streams" \ ? "STREAM-GROUP" Initial ? \ DESCRIPTION DESCRIPTION = 
-"Streams with user-specified values entered" \ ? "STREAM-GROUP" Products ? \ 
-DESCRIPTION DESCRIPTION = "Product streams" \ ? "STREAM-GROUP" Tears ? \ 
-DESCRIPTION DESCRIPTION = 
+"STREAM-CLASS" "STREAM-CLASS" ? \ DEFINITION SCLASS = CONVEN \ \ DEFINITION 
+SCLASS = MIXNC \ \ DEFINITION SCLASS = MIXCISLD \ \ DEFINITION SCLASS = 
+MIXNCPSD \ \ DEFINITION SCLASS = MIXCIPSD \ \ DEFINITION SCLASS = MIXCINC \ \ 
+DEFINITION SCLASS = MCINCPSD \ \ HEAT-DEFINE H-SCLASS = HEAT STREAM-ATTR = 
+HEAT \ \ HEAT-DEFINE H-SCLASS = LOAD STREAM-ATTR = LOAD \ ? "STREAM-CLASS" 
+"DEF-STREAMS" ? ? "STREAM-NAMES" ? ? "STREAM-GROUP" All ? \ DESCRIPTION 
+DESCRIPTION = "All streams" \ ? "STREAM-GROUP" Boundary ? \ DESCRIPTION 
+DESCRIPTION = "Boundary streams" \ ? "STREAM-GROUP" Charge ? \ DESCRIPTION 
+DESCRIPTION = "Charge streams" \ ? "STREAM-GROUP" Feeds ? \ DESCRIPTION 
+DESCRIPTION = "Feed streams" \ ? "STREAM-GROUP" Initial ? \ DESCRIPTION 
+DESCRIPTION = "Streams with user-specified values entered" \ ? "STREAM-GROUP" 
+Products ? \ DESCRIPTION DESCRIPTION = "Product streams" \ ? "STREAM-GROUP" 
+Tears ? \ DESCRIPTION DESCRIPTION = 
 "Tear streams manipulated by the convergence algorithms" \ ? STREAM MATERIAL 
-FEED ? ; "METCBAR_MOLE" ; \ SUBSTREAM SSID = MIXED TEMP = 20. <22> <4> PRES
- = 0.01325 <20> <15> BASIS = "MASS-FRAC" FLOWBASE = MASS TOTFLOW = 10000. 
+FEED ? ; "PROJET_MOLE" ; \ SUBSTREAM SSID = MIXED TEMP = 20. <22> <4> PRES = 
+0.01325 <20> <15> BASIS = "MASS-FRAC" FLOWBASE = MASS TOTFLOW = 10000. <-80> 
+<3> TOTAL = 1. <-3> <0> JUNK = 2 \ \ MOLE-FLOW SSID1 = MIXED CID = ETHANOL 
+FLOW = 0.1 <-3> <0> /  SSID1 = MIXED CID = H2O FLOW = 0.9 <-3> <0> \ ? STREAM 
+MATERIAL RADFEED ? ; "PROJET_MOLE" ; \ SUBSTREAM SSID = MIXED TEMP = 20. <22> 
+<4> PRES = 0.0 <20> <15> BASIS = "MASS-FRAC" FLOWBASE = MASS TOTFLOW = 10000. 
 <-80> <3> TOTAL = 1. <-89> <0> JUNK = 2 \ \ MOLE-FLOW SSID1 = MIXED CID = 
 ETHANOL FLOW = 0.1 <-3> <0> /  SSID1 = MIXED CID = H2O FLOW = 0.9 <-3> <0> \ 
-? "EO-VARS" ? ? BLOCK DSTWU SHORTCUT ? ; "METCBAR_MOLE" ; ; ICON1 ; \ PARAM 
+? "EO-VARS" ? ? BLOCK DSTWU SHORTCUT ? ; "PROJET_MOLE" ; ; ICON1 ; \ PARAM 
 LIGHTKEY = ETHANOL RECOVL = 0.910116 <0> <0> HEAVYKEY = H2O RECOVH = 0.011236 
-<0> <0> PTOP = 1. <20> <3> PBOT = 1. <20> <3> NSTAGE = 100 \ ? "EO-CONV-OPTI" 
-? \ DMO-PARAMS MODE = DEFAULT \ \ DMO-PARAMS MODE = SIMULATION \ \ DMO-PARAMS 
-MODE = "PARAMETER-ESTIMATION" \ \ DMO-PARAMS MODE = RECONCILIATION \ \ 
-DMO-PARAMS MODE = OPTIMIZATION \ \ LSSQP-PARAMS MODE-L = DEFAULT \ \ 
-LSSQP-PARAMS MODE-L = SIMULATION \ \ LSSQP-PARAMS MODE-L = 
-"PARAMETER-ESTIMATION" \ \ LSSQP-PARAMS MODE-L = RECONCILIATION \ \ 
-LSSQP-PARAMS MODE-L = OPTIMIZATION \ \ NSOLVE-PARAM NSOLVE-MODE = DEFAULT \ \ 
-NSOLVE-PARAM NSOLVE-MODE = SIMULATION \ \ NSOLVE-PARAM NSOLVE-MODE = 
-"PARAMETER-ESTIMATION" \ \ XSLP-PARAMS XSLP-MODE = DEFAULT \ \ XSLP-PARAMS 
-XSLP-MODE = SIMULATION \ \ XSLP-PARAMS XSLP-MODE = "PARAMETER-ESTIMATION" \ \ 
-XSLP-PARAMS XSLP-MODE = RECONCILIATION \ \ XSLP-PARAMS XSLP-MODE = 
-OPTIMIZATION \ ? REPORT "BLOCK-REPORT" ? ? REPORT "STREAM-REPOR" ? \ OPTIONS 
-MOLEFLOW = MOLEFLOW \ ? REPORT "PROPERTY-REP" ? \ OPTIONS PCES = PCES 
-PROP-DATA = "PROP-DATA" DFMS = DFMS \ ? "PROP-TABLE" BINARY "BINRY-3" ? ; 
-"METCBAR_MOLE" ; \ PROPERTIES OPSETNAME = NRTL FRWATEROPSET = "STEAM-TA" 
-SOLU-WATER = 3 TRUE-COMPS = YES \ \ "MASS-FLOW" COMP1 = ETHANOL COMP2 = H2O \ 
-\ STATE VFRAC = 0.0 <0> <0> PRES = 1.013250000 <20> <5> GUNITLABEL = "cal/mol" 
-\ \ ANALTYP ANALTYPE = TXY \ \ TVARY TVARNAME = TEMP TUNITLABEL = C TVARVALUE
- = LIST TLIST = ( 25.00000000 <0> <0> ) \ \ PVARY PVARNAME = PRES PUNITLABEL
- = "N/sqm" PVARVALUE = LIST PLIST = ( 101320. <0> <0> ) \ \ CVARY CVARNAME = 
-MOLEFRAC CCOMP = ETHANOL VARVALUE = RANGE CLOWER = 0.0 <0> <0> CUPPER = 1.0 
-<0> <0> CINCR = 0.020000 <0> <0> CNPOINT = 50 \ \ PARAM NPHASE = 3 TAGID = 
-"BINRY-3" \ \ PROPTY LOCALPROP = NRTL \ \ P2 PCOMPS1 = ETHANOL PCOMPS2 = H2O 
-\ 
+<0> <0> PTOP = 0.0 <20> <15> PBOT = 0.0 <20> <15> NSTAGE = 18 PLOT = YES \ \ 
+PLOT LOWER = 10 UPPER = 100 NPOINT = 90 OPT-SZNO = NUMBER \ \ "SS-FLOWEMBED" 
+SSXML = ( 
+"<tffString><GroupName>Boundary</GroupName><TemplateName>Full</Template" 
+"Name><IsTemplateGroupDefaulted>false</IsTemplateGroupDefaulted><IsTemp" 
+"lateGlobalDefaulted>true</IsTemplateGlobalDefaulted><IncludesChildHier" 
+"archyStreams>false</IncludesChildHierarchyStreams><CommonShellSettings" 
+">&lt;srcSettings$StreamIds=""FEED,DISTILAT,RESIDU""$TemplateName=""Full""&" 
+"gt;&lt;TFFTable&gt;&lt;GeneralOptions&gt;Description,SourceAndDestinat" 
+"ion,StreamClass,MaximumErrorTolerance,CostFlow,PhaseLabel,ComponentAtt" 
+"ributes,ParticleSizeDistributions,Temperature,Pressure,MolarVaporFract" 
+"ion,MolarLiquidFraction,MolarSolidFraction,MolarEnthalpy,MolarEntropy," 
+"MolarDensity,MassVaporFraction,MassLiquidFraction,MassSolidFraction,Ma" 
+"ssEnthalpy,MassEntropy,MassDensity,EnthalpyFlow,AverageMolecularWeight" 
+",BatchProperties&lt;/GeneralOptions&gt;&lt;ScopeOptions&gt;PhasesForMi" 
+"xedSubstream,TotalStream,Substreams,MoleFlows,MassFlows,MoleFractions," 
+"MassFractions,VolumeFlows&lt;/ScopeOptions&gt;&lt;Properties&gt;&lt;Pr" 
+"operty$Type=""StateConditionProperty""$EngineName=""TEMP""$/&gt;&lt;Proper" 
+"ty$Type=""StateConditionProperty""$EngineName=""PRES""$/&gt;&lt;Property$T" 
+"ype=""StateConditionProperty""$EngineName=""VFRAC""$/&gt;&lt;Property$Type" 
+"=""StateConditionProperty""$EngineName=""LFRAC""$/&gt;&lt;Property$Type=""S" 
+"tateConditionProperty""$EngineName=""SFRAC""$/&gt;&lt;Property$Type=""Stat" 
+"eConditionProperty""$EngineName=""MASSVFRA""$/&gt;&lt;Property$Type=""Stat" 
+"eConditionProperty""$EngineName=""MASSLFRA""$/&gt;&lt;Property$Type=""Stat" 
+"eConditionProperty""$EngineName=""MASSSFRA""$/&gt;&lt;Property$Type=""Stat" 
+"eConditionProperty""$EngineName=""HMX""$/&gt;&lt;Property$Type=""StateCond" 
+"itionProperty""$EngineName=""MASSHMX""$/&gt;&lt;Property$Type=""StateCondi" 
+"tionProperty""$EngineName=""SMX""$/&gt;&lt;Property$Type=""StateConditionP" 
+"roperty""$EngineName=""MASSSMX""$/&gt;&lt;Property$Type=""StateConditionPr" 
+"operty""$EngineName=""RHOMX""$/&gt;&lt;Property$Type=""StateConditionPrope" 
+"rty""$EngineName=""MASSRHOM""$/&gt;&lt;Property$Type=""StateConditionPrope" 
+"rty""$EngineName=""HFLMX""$/&gt;&lt;Property$Type=""StateConditionProperty" 
+"""$EngineName=""MWMX""$/&gt;&lt;Property$Type=""StateConditionProperty""$En" 
+"gineName=""MOLEFLOW""$/&gt;&lt;Property$Type=""StateConditionProperty""$En" 
+"gineName=""MOLEFRAC""$/&gt;&lt;Property$Type=""StateConditionProperty""$En" 
+"gineName=""MASSFLOW""$/&gt;&lt;Property$Type=""StateConditionProperty""$En" 
+"gineName=""MASSFRAC""$/&gt;&lt;Property$Type=""StateConditionProperty""$En" 
+"gineName=""VOLFLMX""$/&gt;&lt;Property$Type=""BatchProperty""$EngineName=""" 
+"cmole_cycle""$/&gt;&lt;Property$Type=""BatchProperty""$EngineName=""cmole_" 
+"time""$/&gt;&lt;Property$Type=""BatchProperty""$EngineName=""cmass_cycle""$" 
+"/&gt;&lt;Property$Type=""BatchProperty""$EngineName=""cmass_time""$/&gt;&l" 
+"t;Property$Type=""BatchProperty""$EngineName=""vol_cycle""$/&gt;&lt;Proper" 
+"ty$Type=""BatchProperty""$EngineName=""vol_time""$/&gt;&lt;Property$Type=""" 
+"BatchProperty""$EngineName=""enth_cycle""$/&gt;&lt;Property$Type=""BatchPr" 
+"operty""$EngineName=""enth_time""$/&gt;&lt;Property$Type=""BatchProperty""$" 
+"EngineName=""cycle_time""$/&gt;&lt;Property$Type=""BatchProperty""$EngineN" 
+"ame=""oper_time""$/&gt;&lt;Property$Type=""BatchProperty""$EngineName=""ntr" 
+"ain""$/&gt;&lt;/Properties&gt;&lt;/TFFTable&gt;&lt;/srcSettings&gt;</Co" 
+"mmonShellSettings></tffString>" ) \ ? BLOCK RADFRAC RADFRAC ? ; "PROJET_MOLE" 
+; ; FRACT1 ; \ PARAM NSTAGE = 18 NO-PHASE = 2 NSTAGEMAX = 19 \ \ "COL-CONFIG" 
+CONDENSER = TOTAL \ \ FEEDS FEED-SID = RADFEED FEED-STAGE = 18 \ \ PRODUCTS 
+PROD-STREAM = RADRESID PROD-STAGE = 18 PROD-PHASE = L P-S = N /  PROD-STREAM
+ = RADDIST PROD-STAGE = 1 PROD-PHASE = L P-S = N \ \ "P-SPEC2" PRES1 = 0.0 
+<20> <15> \ \ "COL-SPECS" BASIS-RDV = 0.0 <-1> <0> D-BASIS = MASS BASIS-D = 
+1011.24 <-80> <3> RR-BASIS = MOLE BASIS-RR = 7.798656 <-1> <0> \ \ SPEC 
+SPEC-NO = 1 SPEC-TYPE = "MASS-FRAC" VALUE = 0.1 <0> <0> SPEC-COMPS = ( H2O ) 
+SPEC-STREAMS = ( RADDIST ) SPEC-DESCRIP = "Top Purity" \ \ SPEC SPEC-NO = 2 
+SPEC-TYPE = "MASS-FRAC" VALUE = 0.01 <0> <0> SPEC-COMPS = ( ETHANOL ) 
+SPEC-STREAMS = ( RADRESID ) SPEC-DESCRIP = "Bottom Purity" \ \ "KLL-VECS" \ \ 
+"BLOCK-OPTION" BLKOPFREWAT = NO \ \ "TRSZ-VECS" \ \ "PCKSR-VECS" \ ? 
+"STREAM-PRICE" ? ; "PROJET_MOLE" ; ? "EO-CONV-OPTI" ? \ DMO-PARAMS MODE = 
+DEFAULT \ \ DMO-PARAMS MODE = SIMULATION \ \ DMO-PARAMS MODE = 
+"PARAMETER-ESTIMATION" \ \ DMO-PARAMS MODE = RECONCILIATION \ \ DMO-PARAMS 
+MODE = OPTIMIZATION \ \ LSSQP-PARAMS MODE-L = DEFAULT \ \ LSSQP-PARAMS MODE-L
+ = SIMULATION \ \ LSSQP-PARAMS MODE-L = "PARAMETER-ESTIMATION" \ \ 
+LSSQP-PARAMS MODE-L = RECONCILIATION \ \ LSSQP-PARAMS MODE-L = OPTIMIZATION \ 
+\ NSOLVE-PARAM NSOLVE-MODE = DEFAULT \ \ NSOLVE-PARAM NSOLVE-MODE = 
+SIMULATION \ \ NSOLVE-PARAM NSOLVE-MODE = "PARAMETER-ESTIMATION" \ \ 
+XSLP-PARAMS XSLP-MODE = DEFAULT \ \ XSLP-PARAMS XSLP-MODE = SIMULATION \ \ 
+XSLP-PARAMS XSLP-MODE = "PARAMETER-ESTIMATION" \ \ XSLP-PARAMS XSLP-MODE = 
+RECONCILIATION \ \ XSLP-PARAMS XSLP-MODE = OPTIMIZATION \ ? REPORT 
+"BLOCK-REPORT" ? ? REPORT "STREAM-REPOR" ? \ OPTIONS MOLEFLOW = MOLEFLOW \ ? 
+REPORT "PROPERTY-REP" ? \ OPTIONS PCES = PCES PROP-DATA = "PROP-DATA" DFMS = 
+DFMS \ ? REPORT "BATCH-OPERAT" ? ; "PROJET_MOLE" ; ? "PROP-TABLE" BINARY 
+"BINRY-3" ? ; "PROJET_MOLE" ; \ PROPERTIES OPSETNAME = NRTL FRWATEROPSET = 
+"STEAM-TA" SOLU-WATER = 3 TRUE-COMPS = YES \ \ "MASS-FLOW" COMP1 = ETHANOL 
+COMP2 = H2O \ \ STATE VFRAC = 0.0 <0> <0> PRES = 0.0 <20> <15> GUNITLABEL = 
+"cal/mol" \ \ ANALTYP ANALTYPE = TXY \ \ TVARY TVARNAME = TEMP TUNITLABEL = C 
+TVARVALUE = LIST TLIST = ( 25.00000000 <0> <0> ) \ \ PVARY PVARNAME = PRES 
+PUNITLABEL = "N/sqm" PVARVALUE = LIST PLIST = ( 101320. <0> <0> ) \ \ CVARY 
+CVARNAME = MOLEFRAC CCOMP = ETHANOL VARVALUE = RANGE CLOWER = 0.0 <0> <0> 
+CUPPER = 1.0 <0> <0> CINCR = 0.020000 <0> <0> CNPOINT = 50 \ \ PARAM NPHASE
+ = 3 TAGID = "BINRY-3" \ \ PROPTY LOCALPROP = NRTL \ \ P2 PCOMPS1 = ETHANOL 
+PCOMPS2 = H2O \ 
 
  GRAPHICS_BACKUP
 PFS V 5.00
@@ -734,14 +811,14 @@ pseudobatch 0
 partial 1
 animation 1
 runanyway 0
-globalqw 0
-globaltemp 0
-globalpres 0
-globalflow 0
+globalqw 1
+globaltemp 1
+globalpres 1
+globalflow 1
 globalstrmqw 0
 globalvflow 0
 globalmflow 0
-globalvfrac 0
+globalvfrac 1
 globalshowcalcerror 1
 globalshowcalcwarning 1
 globalshowdisabled 1
@@ -818,12 +895,23 @@ tpsaupgrade 1
 regcases NN
 #
 $_APWNSHELL_SETTINGS
-<FileRootSettings><CaseFileSettings>&lt;CaseFileSettings StreamSummaryFormSettings="&amp;lt;src&amp;gt;&amp;lt;ReferencedPaths&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Results Summary&amp;lt;/Path&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Streams.FEED&amp;lt;/Path&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Streams.DISTILAT&amp;lt;/Path&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Streams.RESIDU&amp;lt;/Path&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Blocks.SHORTCUT&amp;lt;/Path&amp;gt;&amp;lt;/ReferencedPaths&amp;gt;&amp;lt;ReferencedTemplates /&amp;gt;&amp;lt;/src&amp;gt;" xmlns="clr-namespace:AspenTech.AspenPlus.Infrastructure;assembly=AspenTech.AspenPlus.Infrastructure" /&gt;</CaseFileSettings><CommonShellSettings>&lt;CommonShellSettings xmlns="http://schemas.aspentech.com/xaml/presentation/visualisation/commonshell" xmlns:atapmaa="clr-namespace:AspenTech.AspenPlus.Modules.ApwnApplication;assembly=ApwnShell" xmlns:atapie="clr-namespace:AspenTech.AspenPlus.Infrastructure.Events;assembly=AspenTech.AspenPlus.Infrastructure" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:apmab="clr-namespace:AspenPlus.Modules.ApwnBrowser;assembly=ApwnShell" xmlns:cxv="http://schemas.aspentech.com/xaml/presentation/cxsviewmodel" xmlns:atapi="clr-namespace:AspenTech.AspenPlus.Infrastructure;assembly=AspenTech.AspenPlus.Infrastructure"&gt;&lt;CommonShellSettings.CurrentWorkspace&gt;&lt;ShellWorkspace ActivationBarState="&amp;lt;DashboardPanel IsExpanded=&amp;quot;false&amp;quot; IsTurnedOff=&amp;quot;false&amp;quot; Version=&amp;quot;370&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;Item Type=&amp;quot;AspenTech.ActivationDashboard.EconomicAnalysis.DashboardItem&amp;quot;&amp;gt;&amp;amp;lt;!--This is the current state of Economics Analysis Dashboard--&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;Root&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;OnOffState Value=&amp;quot;Off&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;CapitalCost Value=&amp;quot;&amp;quot; Units=&amp;quot;USD&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;UtilityCost Value=&amp;quot;&amp;quot; Units=&amp;quot;USD/Year&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;HasError&amp;amp;gt;false&amp;amp;lt;/HasError&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;_statusCode Value=&amp;quot;-1&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;StatusText Value=&amp;quot;&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;Flags&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isRunCompleted Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isRunning Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_incompleteButActivated Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_incompleteButLoaded Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_incompleteButSized Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_incompleteButMapped Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_completeEvaluatedNotAutoRun Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isSimulationChanged Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isInStopping Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isOnOffButtonCanBeUsed Value=&amp;quot;true&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isResetDashboardButLeaveItOn Value=&amp;quot;true&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;/Flags&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;/Root&amp;amp;gt;&amp;lt;/Item&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;Item Type=&amp;quot;AspenTech.ActivationDashboard.EnergyAnalysis.DashboardItem&amp;quot;&amp;gt;&amp;amp;lt;!--This is the current state of Energy Analysis Dashboard--&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;Root&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;IsExpanded&amp;amp;gt;false&amp;amp;lt;/IsExpanded&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;OnOff&amp;amp;gt;Off&amp;amp;lt;/OnOff&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;Status&amp;amp;gt;NotReady&amp;amp;lt;/Status&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;PUS&amp;amp;gt;&amp;amp;lt;/PUS&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;Percent&amp;amp;gt;&amp;amp;lt;/Percent&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;Units&amp;amp;gt;MW&amp;amp;lt;/Units&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;/Root&amp;amp;gt;&amp;lt;/Item&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;Item Type=&amp;quot;AspenTech.ActivationDashboard.EdrActivation.DashboardItem&amp;quot;&amp;gt;&amp;amp;lt;EDR&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;IsShowModelStatus&amp;amp;gt;false&amp;amp;lt;/IsShowModelStatus&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;IsShowRiskStatus&amp;amp;gt;false&amp;amp;lt;/IsShowRiskStatus&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;IsShowLegend&amp;amp;gt;false&amp;amp;lt;/IsShowLegend&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;DetailCount&amp;amp;gt;0&amp;amp;lt;/DetailCount&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;/EDR&amp;amp;gt;&amp;lt;/Item&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;/DashboardPanel&amp;gt;" Layout="&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;xamDockManager version=&amp;quot;17.2.20172.2029&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;contentPanes&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;_AnonymousScreen1&amp;quot; location=&amp;quot;Document&amp;quot; lastActivatedTime=&amp;quot;2025-03-27T12:06:13.3864066Z&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;FlowsheetScreenFactory&amp;quot; location=&amp;quot;Document&amp;quot; lastActivatedTime=&amp;quot;2025-03-27T12:05:36.2760981Z&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;ModelLibraryScreenFactoryKey&amp;quot; location=&amp;quot;DockedBottom&amp;quot; lastActivatedTime=&amp;quot;2025-03-27T11:42:14.0602317Z&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/contentPanes&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;panes&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;splitPane splitterOrientation=&amp;quot;Vertical&amp;quot; location=&amp;quot;DockedBottom&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;      &amp;lt;contentPane name=&amp;quot;ModelLibraryScreenFactoryKey&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;/splitPane&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/panes&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;documents splitterOrientation=&amp;quot;Vertical&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;splitPane splitterOrientation=&amp;quot;Vertical&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;      &amp;lt;tabGroup selectedIndex=&amp;quot;1&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;        &amp;lt;contentPane name=&amp;quot;FlowsheetScreenFactory&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;        &amp;lt;contentPane name=&amp;quot;_AnonymousScreen1&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;      &amp;lt;/tabGroup&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;/splitPane&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/documents&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;/xamDockManager&amp;gt;" NavigationGroupToSelect="Simulation" IsNavigationPaneMinimized="False" IsRibbonMinimized="False"&gt;&lt;ShellWorkspace.Screens&gt;&lt;WorkspaceScreenData PaneName="_AnonymousScreen1" ScreenFactoryKey="ApwnFormContentFactory"&gt;&lt;WorkspaceScreenData.ScreenSubject&gt;&lt;atapmaa:ApwnFormScreenSubject Key="Blocks.SHORTCUT.Results" NavigationGroupKey="Simulation"&gt;&lt;atapmaa:ApwnFormScreenSubject.ShowFormArgs&gt;&lt;atapie:ShowFormEventArgs FormProgId="MMDSTWU.MMDSTWU_RESULT" FormKey="Blocks.SHORTCUT.Results" Header="SHORTCUT (DSTWU) - Results" ResultsOnly="True" PathKey="Top.appModelV8.Blocks.SHORTCUT"&gt;&lt;atapie:ShowFormEventArgs.Parameters&gt;&lt;s:String assembly:Key="id"&gt;SHORTCUT&lt;/s:String&gt;&lt;s:String assembly:Key="main"&gt;Top.appModelV8.Blocks.SHORTCUT&lt;/s:String&gt;&lt;/atapie:ShowFormEventArgs.Parameters&gt;&lt;/atapie:ShowFormEventArgs&gt;&lt;/atapmaa:ApwnFormScreenSubject.ShowFormArgs&gt;&lt;atapmaa:ApwnFormScreenSubject.PlotwizardRule&gt;&lt;apmab:ApwnPlotwizardRule ContextPath="Top.appModelV8.Blocks.SHORTCUT" /&gt;&lt;/atapmaa:ApwnFormScreenSubject.PlotwizardRule&gt;&lt;/atapmaa:ApwnFormScreenSubject&gt;&lt;/WorkspaceScreenData.ScreenSubject&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;atapmaa:ApwnFormScreenState&gt;&lt;atapmaa:ApwnFormScreenState.Parameters&gt;&lt;cxv:CxvParameter Name="main" Value="Top.appModelV8.Blocks.SHORTCUT" /&gt;&lt;cxv:CxvParameter Name="id" Value="SHORTCUT" /&gt;&lt;cxv:CxvParameter Name="extraComments_path" Value="Comments" /&gt;&lt;cxv:CxvParameter Name="extraDescription_path" Value="Input.DESCRIPTION" /&gt;&lt;cxv:CxvParameter Name="extraUnits_path" Value="Input.Unit Set" /&gt;&lt;cxv:CxvParameter Name="selected_tab" Value="tab0" /&gt;&lt;/atapmaa:ApwnFormScreenState.Parameters&gt;&lt;/atapmaa:ApwnFormScreenState&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;WorkspaceScreenData PaneName="FlowsheetScreenFactory" ScreenFactoryKey="FlowsheetScreenFactory"&gt;&lt;WorkspaceScreenData.ScreenSubject&gt;&lt;atapi:StringScreenSubject subject="{assembly:Null}" fatherNodePath="{assembly:Null}" NavigationGroupKey="Simulation" /&gt;&lt;/WorkspaceScreenData.ScreenSubject&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;ScreenState Zoom="3.9700010000000003" /&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;WorkspaceScreenData PaneName="ModelLibraryScreenFactoryKey" ScreenFactoryKey="ModelLibraryScreenFactoryKey"&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;ScreenState /&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;/ShellWorkspace.Screens&gt;&lt;/ShellWorkspace&gt;&lt;/CommonShellSettings.CurrentWorkspace&gt;&lt;CommonShellSettings.SavedWorkspaces&gt;&lt;ShellWorkspaceFolder /&gt;&lt;/CommonShellSettings.SavedWorkspaces&gt;&lt;CommonShellSettings.NavigatorGroupWorkspaces&gt;&lt;ShellWorkspace Name="Properties" Layout="&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;xamDockManager version=&amp;quot;17.2.20172.2029&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;contentPanes /&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;/xamDockManager&amp;gt;" NavigationGroupToSelect="Properties" IsNavigationPaneMinimized="False" IsRibbonMinimized="False" /&gt;&lt;/CommonShellSettings.NavigatorGroupWorkspaces&gt;&lt;/CommonShellSettings&gt;</CommonShellSettings></FileRootSettings>
+<FileRootSettings><CaseFileSettings>&lt;CaseFileSettings StreamSummaryFormSettings="&amp;lt;src&amp;gt;&amp;lt;ReferencedPaths&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Results Summary&amp;lt;/Path&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Streams.FEED&amp;lt;/Path&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Streams.DISTILAT&amp;lt;/Path&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Streams.RESIDU&amp;lt;/Path&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Streams.RADFEED&amp;lt;/Path&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Streams.RADRESID&amp;lt;/Path&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Streams.RADDIST&amp;lt;/Path&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Blocks.SHORTCUT&amp;lt;/Path&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Blocks.RADFRAC&amp;lt;/Path&amp;gt;&amp;lt;/ReferencedPaths&amp;gt;&amp;lt;ReferencedTemplates /&amp;gt;&amp;lt;/src&amp;gt;" xmlns="clr-namespace:AspenTech.AspenPlus.Infrastructure;assembly=AspenTech.AspenPlus.Infrastructure" /&gt;</CaseFileSettings><CommonShellSettings>&lt;CommonShellSettings xmlns="http://schemas.aspentech.com/xaml/presentation/visualisation/commonshell" xmlns:atapmaa="clr-namespace:AspenTech.AspenPlus.Modules.ApwnApplication;assembly=ApwnShell" xmlns:atapie="clr-namespace:AspenTech.AspenPlus.Infrastructure.Events;assembly=AspenTech.AspenPlus.Infrastructure" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:apmab="clr-namespace:AspenPlus.Modules.ApwnBrowser;assembly=ApwnShell" xmlns:cxv="http://schemas.aspentech.com/xaml/presentation/cxsviewmodel" xmlns:atapi="clr-namespace:AspenTech.AspenPlus.Infrastructure;assembly=AspenTech.AspenPlus.Infrastructure"&gt;&lt;CommonShellSettings.CurrentWorkspace&gt;&lt;ShellWorkspace ActivationBarState="&amp;lt;DashboardPanel IsExpanded=&amp;quot;false&amp;quot; IsTurnedOff=&amp;quot;false&amp;quot; Version=&amp;quot;370&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;Item Type=&amp;quot;AspenTech.ActivationDashboard.EconomicAnalysis.DashboardItem&amp;quot;&amp;gt;&amp;amp;lt;!--This is the current state of Economics Analysis Dashboard--&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;Root&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;OnOffState Value=&amp;quot;Off&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;CapitalCost Value=&amp;quot;&amp;quot; Units=&amp;quot;USD&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;UtilityCost Value=&amp;quot;&amp;quot; Units=&amp;quot;USD/Year&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;HasError&amp;amp;gt;false&amp;amp;lt;/HasError&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;_statusCode Value=&amp;quot;-1&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;StatusText Value=&amp;quot;&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;Flags&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isRunCompleted Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isRunning Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_incompleteButActivated Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_incompleteButLoaded Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_incompleteButSized Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_incompleteButMapped Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_completeEvaluatedNotAutoRun Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isSimulationChanged Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isInStopping Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isOnOffButtonCanBeUsed Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isResetDashboardButLeaveItOn Value=&amp;quot;true&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;/Flags&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;/Root&amp;amp;gt;&amp;lt;/Item&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;Item Type=&amp;quot;AspenTech.ActivationDashboard.EnergyAnalysis.DashboardItem&amp;quot;&amp;gt;&amp;amp;lt;!--This is the current state of Energy Analysis Dashboard--&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;Root&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;IsExpanded&amp;amp;gt;false&amp;amp;lt;/IsExpanded&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;OnOff&amp;amp;gt;Off&amp;amp;lt;/OnOff&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;Status&amp;amp;gt;InputIncomplete&amp;amp;lt;/Status&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;PUS&amp;amp;gt;&amp;amp;lt;/PUS&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;Percent&amp;amp;gt;&amp;amp;lt;/Percent&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;Units&amp;amp;gt;MW&amp;amp;lt;/Units&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;/Root&amp;amp;gt;&amp;lt;/Item&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;Item Type=&amp;quot;AspenTech.ActivationDashboard.EdrActivation.DashboardItem&amp;quot;&amp;gt;&amp;amp;lt;EDR&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;IsShowModelStatus&amp;amp;gt;false&amp;amp;lt;/IsShowModelStatus&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;IsShowRiskStatus&amp;amp;gt;false&amp;amp;lt;/IsShowRiskStatus&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;IsShowLegend&amp;amp;gt;false&amp;amp;lt;/IsShowLegend&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;DetailCount&amp;amp;gt;0&amp;amp;lt;/DetailCount&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;/EDR&amp;amp;gt;&amp;lt;/Item&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;/DashboardPanel&amp;gt;" Layout="&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;xamDockManager version=&amp;quot;17.2.20172.2029&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;contentPanes&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;_AnonymousScreen2&amp;quot; location=&amp;quot;Document&amp;quot; lastActivatedTime=&amp;quot;2025-04-03T11:19:09.0629523Z&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;FlowsheetScreenFactory&amp;quot; location=&amp;quot;Document&amp;quot; lastActivatedTime=&amp;quot;2025-04-03T11:15:41.6634112Z&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;ModelLibraryScreenFactoryKey&amp;quot; location=&amp;quot;DockedBottom&amp;quot; lastActivatedTime=&amp;quot;2025-04-03T10:44:24.1578743Z&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;Mapper&amp;quot; location=&amp;quot;Document&amp;quot; lastActivatedTime=&amp;quot;2025-04-03T10:19:29.4268854Z&amp;quot; visibility=&amp;quot;Collapsed&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/contentPanes&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;panes&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;splitPane name=&amp;quot;Zbe7d8efd9a0c4af0a729a1d3e917cc03&amp;quot; splitterOrientation=&amp;quot;Vertical&amp;quot; location=&amp;quot;DockedBottom&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;      &amp;lt;contentPane name=&amp;quot;ModelLibraryScreenFactoryKey&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;/splitPane&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/panes&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;documents splitterOrientation=&amp;quot;Vertical&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;splitPane name=&amp;quot;Z2777336b23494629a1e91106b88f66f9&amp;quot; splitterOrientation=&amp;quot;Vertical&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;      &amp;lt;tabGroup name=&amp;quot;Z342e430c156b42bd887facc25a3bd56f&amp;quot; selectedIndex=&amp;quot;2&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;        &amp;lt;contentPane name=&amp;quot;FlowsheetScreenFactory&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;        &amp;lt;contentPane name=&amp;quot;Mapper&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;        &amp;lt;contentPane name=&amp;quot;_AnonymousScreen2&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;      &amp;lt;/tabGroup&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;/splitPane&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/documents&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;/xamDockManager&amp;gt;" NavigationGroupToSelect="Simulation" IsNavigationPaneMinimized="False" IsRibbonMinimized="False"&gt;&lt;ShellWorkspace.Screens&gt;&lt;WorkspaceScreenData PaneName="_AnonymousScreen2" ScreenFactoryKey="ApwnFormContentFactory"&gt;&lt;WorkspaceScreenData.ScreenSubject&gt;&lt;atapmaa:ApwnFormScreenSubject Key="Blocks.RADFRAC.Specifications.Specification Summary" NavigationGroupKey="Simulation"&gt;&lt;atapmaa:ApwnFormScreenSubject.ShowFormArgs&gt;&lt;atapie:ShowFormEventArgs FormProgId="MMRADFRAC.MMRADFRAC_SPECSUMMARY" FormKey="Blocks.RADFRAC.Specifications.Specification Summary" Header="RADFRAC Specifications - Specification Summary" ResultsOnly="False" PathKey="Top.appModelV8.Blocks.RADFRAC"&gt;&lt;atapie:ShowFormEventArgs.Parameters&gt;&lt;s:String assembly:Key="id"&gt;RADFRAC&lt;/s:String&gt;&lt;s:String assembly:Key="main"&gt;Top.appModelV8.Blocks.RADFRAC&lt;/s:String&gt;&lt;/atapie:ShowFormEventArgs.Parameters&gt;&lt;/atapie:ShowFormEventArgs&gt;&lt;/atapmaa:ApwnFormScreenSubject.ShowFormArgs&gt;&lt;atapmaa:ApwnFormScreenSubject.PlotwizardRule&gt;&lt;apmab:ApwnPlotwizardRule ContextPath="Top.appModelV8.Blocks.RADFRAC" /&gt;&lt;/atapmaa:ApwnFormScreenSubject.PlotwizardRule&gt;&lt;/atapmaa:ApwnFormScreenSubject&gt;&lt;/WorkspaceScreenData.ScreenSubject&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;atapmaa:ApwnFormScreenState&gt;&lt;atapmaa:ApwnFormScreenState.Parameters&gt;&lt;cxv:CxvParameter Name="main" Value="Top.appModelV8.Blocks.RADFRAC" /&gt;&lt;cxv:CxvParameter Name="id" Value="RADFRAC" /&gt;&lt;cxv:CxvParameter Name="extraComments_path" Value="Comments" /&gt;&lt;cxv:CxvParameter Name="extraDescription_path" Value="Input.DESCRIPTION" /&gt;&lt;cxv:CxvParameter Name="extraUnits_path" Value="Input.Unit Set" /&gt;&lt;cxv:CxvParameter Name="p_Inactive" Value="Inactive" /&gt;&lt;cxv:CxvParameter Name="selected_tab" Value="tab0" /&gt;&lt;/atapmaa:ApwnFormScreenState.Parameters&gt;&lt;/atapmaa:ApwnFormScreenState&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;WorkspaceScreenData PaneName="FlowsheetScreenFactory" ScreenFactoryKey="FlowsheetScreenFactory"&gt;&lt;WorkspaceScreenData.ScreenSubject&gt;&lt;atapi:StringScreenSubject subject="{assembly:Null}" fatherNodePath="{assembly:Null}" NavigationGroupKey="Simulation" /&gt;&lt;/WorkspaceScreenData.ScreenSubject&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;ScreenState Zoom="1.280001" /&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;WorkspaceScreenData PaneName="ModelLibraryScreenFactoryKey" ScreenFactoryKey="ModelLibraryScreenFactoryKey"&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;ScreenState /&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;WorkspaceScreenData PaneName="Mapper" ScreenFactoryKey="ClosedScreenPlaceholder"&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;ScreenState /&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;/ShellWorkspace.Screens&gt;&lt;/ShellWorkspace&gt;&lt;/CommonShellSettings.CurrentWorkspace&gt;&lt;CommonShellSettings.SavedWorkspaces&gt;&lt;ShellWorkspaceFolder /&gt;&lt;/CommonShellSettings.SavedWorkspaces&gt;&lt;CommonShellSettings.NavigatorGroupWorkspaces&gt;&lt;ShellWorkspace Name="Properties" Layout="&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&amp;#xA;&amp;lt;xamDockManager version=&amp;quot;17.2.20172.2029&amp;quot;&amp;gt;&amp;#xA;  &amp;lt;contentPanes /&amp;gt;&amp;#xA;&amp;lt;/xamDockManager&amp;gt;" NavigationGroupToSelect="Properties" IsNavigationPaneMinimized="False" IsRibbonMinimized="False" /&gt;&lt;/CommonShellSettings.NavigatorGroupWorkspaces&gt;&lt;/CommonShellSettings&gt;</CommonShellSettings></FileRootSettings>
 $_END_APWNSHELL_SETTINGS
 #
+$_GRID_TEMPLATES
+$_START_TEMPLATE_Model
+<?xml version="1.0" encoding="utf-8"?>
+
+<TabbedSummaryGridTemplateCol>
+
+  <TabbedSummaryGridTemplates />
+
+</TabbedSummaryGridTemplateCol>
+$_END_TEMPLATE_Model
+$_END_GRID_TEMPLATES
 PFSVData
-# of PFS Objects = 5
-SIZE -4.79999 -0.596186 -0.475 1.475
+# of PFS Objects = 9
+SIZE -6.76614 6.09382 -2.46333 1.7
 BLOCK
 ID: SHORTCUT
 Version: 1
@@ -832,6 +920,17 @@ Flag 0
 Section GLOBAL
 At -3.200000 0.500000
 Label At 0.000000 0.000000
+Annotation At -0.225000 -1.075000
+Scale 1.000000 Modifier 0
+BLOCK
+ID: RADFRAC
+Version: 1
+ICON: "FRACT1"
+Flag 0
+Section GLOBAL
+At 3.200000 0.700000
+Label At -0.003352 0.096879
+Annotation At -0.225000 -1.100000
 Scale 1.000000 Modifier 0
 STREAM
 ID: FEED
@@ -923,11 +1022,104 @@ ROUTE 0 2
 $ $ 0.0 0.0
 ROUTE 1 2
 $ $ 0.0 0.0
+STREAM
+ID: RADFEED
+Version: 2
+Flag 0
+GLOBAL 117
+TYPE 0 TERMINAL 1
+At 1.299380 0.709961
+Label At 0.810010 0.000000
+ROUTE 0 0
+$ $ 0.0 0.0
+ROUTE 1 0
+r r 1.299380 0.709961 0
+x x 2.123769 0.709961 0
+y y 2.123769 0.710644 0
+x x 2.775273 0.710644 0
+t l 2.975273 0.710644 0
+$ D 0.001235 0.010644
+$ C 0.000000 0.0
+$ $ 0.0 0.0
+At 0.000000 0.000000
+Label At 0.000000 0.000000
+ROUTE 0 1
+$ $ 0.0 0.0
+ROUTE 1 1
+$ $ 0.0 0.0
+At 0.000000 0.000000
+Label At 0.000000 0.000000
+ROUTE 0 2
+$ $ 0.0 0.0
+ROUTE 1 2
+$ $ 0.0 0.0
+STREAM
+ID: RADRESID
+Version: 2
+Flag 0
+GLOBAL 117
+TYPE 0 TERMINAL 2
+At 6.093820 -0.127534
+Label At -1.098371 0.000000
+ROUTE 0 0
+r l 6.093820 -0.127534 0
+x y 4.950000 -0.127534 0
+y x 4.950000 -0.126154 0
+x 0 3.995577 -0.126154 0
+t r 3.795577 -0.126154 0
+$ C 1.000000 0.0
+$ $ 0.0 0.0
+ROUTE 1 0
+$ $ 0.0 0.0
+At 0.000000 0.000000
+Label At 0.000000 0.000000
+ROUTE 0 1
+$ $ 0.0 0.0
+ROUTE 1 1
+$ $ 0.0 0.0
+At 0.000000 0.000000
+Label At 0.000000 0.000000
+ROUTE 0 2
+$ $ 0.0 0.0
+ROUTE 1 2
+$ $ 0.0 0.0
+STREAM
+ID: RADDIST
+Version: 2
+Flag 0
+GLOBAL 117
+TYPE 0 TERMINAL 2
+At 6.010372 1.230394
+Label At -0.592686 0.000000
+ROUTE 0 0
+r l 6.010372 1.230394 0
+x y 4.825000 1.230394 0
+y x 4.825000 1.226154 0
+x 0 3.847885 1.226154 0
+t r 3.647885 1.226154 0
+$ C 1.000000 0.0
+$ $ 0.0 0.0
+ROUTE 1 0
+$ $ 0.0 0.0
+At 0.000000 0.000000
+Label At 0.000000 0.000000
+ROUTE 0 1
+$ $ 0.0 0.0
+ROUTE 1 1
+$ $ 0.0 0.0
+At 0.000000 0.000000
+Label At 0.000000 0.000000
+ROUTE 0 2
+$ $ 0.0 0.0
+ROUTE 1 2
+$ $ 0.0 0.0
 LEGEND
 Version: 2
-Unfixed
+Dim: -6.76614 -0.675 -4.49312 -2.39062
+Size: 0.0141477
+Font: 1 0 =
 # of PFS Objects = 0
-VIEWPORT -6.552512 1.156337 1.977378 -0.977376
+VIEWPORT -7.945160 15.936155 5.376471 -3.777091
 LAYOUT
 TableFormat 1
 Pages 1 1 1 1
@@ -943,434 +1135,7 @@ BOTTOMMARGIN 10mm
 VISIBILITY 0.030000
 PFDFLAG 255 255
 PFDMODE 0
-SCALE 0.004567
-
-$_SUMMARY_FILE
- MMSUMMARY37.0                                                                  
- IDSET RUNID (PROPERTIES) (114 *5)                                              
- IDSET IT (PROPERTIES) (117 *6 119 *6 115 *1)                                   
- LSET RUNID (%RUNID)                                                            
- LSET IT (%IT)                                                                  
- IDSET VERS (PROPERTIES) (345 *6 346 *6 347 *6 348 *6 355 *6)                   
- LSET VERS (%VERS)                                                              
- DSET RUN-STATUS VERS @VERS ( "37.0" "WIN-X64" "" "moulaertt" "DARWIN-19" )     
- IDSET STRNAM (PROPERTIES) (1233 *6)                                            
- LSET STRNAM (%STRNAM)                                                          
- IDSET ID_STRPR (PROPERTIES) ( 454 *2 <119> 1236 *2 <125> 1237 *2 <29> 1238 *2  
- <55> 1239 *2 <55> 1083 *6 1084 *6 )                                            
- LSET L_STRPR (%ID_STRPR)                                                       
- IDSET ID_GUID (PROPERTIES) ( 1270 *6 )                                         
- LSET L_GUID (%ID_GUID)                                                         
- DSET RUN-STATUS IT @IT ( "MARCH 27, 2025      1:06:13 P.M." "_2738kqb.inm" 0)  
- DSET RUN-STATUS CURRENCY @CURRENCY ( "$" )                                     
- IDSET ID_NCC (COMPONENTS) (ETHANOL H2O)                                        
- IDSET ID_NCCNS (COMPONENTS) (ETHANOL H2O)                                      
- IDSET ALIAS (COMPONENTS) (1 *6)                                                
- LSET ALIAS ( %ID_NCC & %ALIAS)                                                 
- DSET RUN-STATUS RUNID @RUNID ("_2738kqb")                                      
- DSET RUN-STATUS RUNID @RUNID ("_2738kqb")                                      
- IDSET STATUS (PROPERTIES) (125 *1 126 *1 127 *1 128 *1 129 *1 130 *1)          
- LSET STATUS (%STATUS)                                                          
- IDSET PPSTAT (PROPERTIES) (272 *1)                                             
- LSET PPSTAT (%PPSTAT)                                                          
- IDSET IDRXBAL0 (PROPERTIES) ( 73 *2 <11> 74 *2 75 *2 <10> 76 *2 77 *2 <13> 78  
- *2)                                                                            
- IDSET ID_RXBAL (PROPERTIES) ( 73 *2 <11> 358 *2 <11> 359 *2 <11> 74 *2 75 *2   
- <10> 360 *2 <10> 361 *2 <10> 76 *2 362 *2 <10> 363 *2 <10> 364 *2 <10> 365 *2  
- 366 *2 <11> 367 *2 <11> 368 *2 <11> 369 *2 370 *2 <10> 371 *2 <10> 372 *2 <10> 
- 373 *2 77 *2 <13> 374 *2 <13> 375 *2 <13> 78 *2 1266 *2 <10> 1267 *2 <10> 1262 
- *2 <10> 1263 *2 <10> 1264 *2 <10> )                                            
- IDSET ID_MOLE (PROPERTIES) ( 79 *2 <11> 80 *2)                                 
- LSET FLWBAL ( %ID_NCCNS & %ID_MOLE %IDRXBAL0)                                  
- IDSET ID_XY (PROPERTIES) (43 *2 36 *2 39 *2 40 *2)                             
- IDSET ID_XX (PROPERTIES) (43 *2 37 *2 38 *2 40 *2)                             
- IDSET ID_XXY (PROPERTIES) (43 *2 37 *2 38 *2 39 *2 41 *2 42 *2)                
- LSET VLE ( %ID_XY & %ID_NCC)                                                   
- LSET LLE ( %ID_XX & %ID_NCC)                                                   
- LSET VLE3 ( %ID_XXY & %ID_NCC)                                                 
- IDSET ID_KODE (PROPERTIES) (44 *1)                                             
- IDSET BLKIN (BLKIN) (STREAMID ?)                                               
- LSET BLKIN (%BLKIN)                                                            
- IDSET BLKOUT (BLKOUT) (STREAMID ?)                                             
- LSET BLKOUT (%BLKOUT)                                                          
- IDSET TYPIN (TYPIN) (STREAMID ?)                                               
- LSET TYPIN (%TYPIN)                                                            
- IDSET TYPOUT (TYPOUT) (STREAMID ?)                                             
- LSET TYPOUT (%TYPOUT)                                                          
- IDSET PORT_NO (PROPERTIES) (236 *1 237 *1 238 *1)                              
- IDSET IDS_0 (SUBSTREAM) ($TOTAL)                                               
- IDSET IDS_1 (SUBSTREAM) (MIXED)                                                
- IDSET BLKSTAT (PROPERTIES) (120 *1 121 *1)                                     
- IDSET BLKMSG (PROPERTIES) (122 *6)                                             
- LSET BLKSTAT (%BLKSTAT)                                                        
- LSET BLKMSG (%BLKMSG)                                                          
- IDSET DESC (PROPERTIES) (113 *6)                                               
- LSET DESC (%DESC)                                                              
- IDSET IDPH_V (PHASE) (VAPOR)                                                   
- IDSET IDPH_L (PHASE) (LIQUID)                                                  
- IDSET IDPH_S (PHASE) (SOLID)                                                   
- IDSET IDPH_L1 (PHASE) (LIQUID_1)                                               
- IDSET IDPH_T (PHASE) (TOTAL)                                                   
- IDSET IDPH_L2 (PHASE) (LIQUID_2)                                               
- IDSET IDWET (BASIS) (WET)                                                      
- IDSET IDDRY (BASIS) (DRY)                                                      
- IDSET SP (PROPERTIES) (118 *6)                                                 
- LSET SP (%SP)                                                                  
- IDSET SPSTAT (SPSTAT) (116 *1)                                                 
- LSET SPSTAT ( %SPSTAT)                                                         
- IDSET IDERR (PROPERTIES) (131 *1)                                              
- DSET RUN-STATUS SP @SP ( "MARCH 27, 2025 1:06:13 P.M." )                       
- IDSET FOR (PROPERTIES) (737 *1)                                                
- LSET FOR (%FOR)                                                                
- IDSET FORSTAT (PROPERTIES) (738 *1)                                            
- LSET FORSTAT (%FORSTAT)                                                        
- IDSET MW (PROPERTIES) (269 *2)                                                 
- LSET MW (%MW & %ID_NCCNS)                                                      
- DSET MW MW @MW (4.60690400D+01 1.80152800D+01)                                 
- IDSET VST (PROPERTIES) (270 *2 <43> )                                          
- LSET VST (%VST & %ID_NCCNS)                                                    
- DSET VST VST @VST (5.81727000D+01 <3> 1.80500000D+01 <3> )                     
- IDSET TB (PROPERTIES) (271 *2 <22> )                                           
- LSET TB (%TB & %ID_NCC)                                                        
- DSET TB TB @TB (7.82900000D+01 <4> 1.00000000D+02 <4> )                        
- IDSET CASN (PROPERTIES) (37100 *6)                                             
- LSET CASN (%ID_NCC & %CASN)                                                    
- DSET CASN CASN @CASN ( "64-17-5" "7732-18-5" )                                 
- IDSET PAMB (PROPERTIES) (32 *2)                                                
- LSET PAMB (%PAMB)                                                              
- DSET PAMB PAMB @PAMB (1.01325000D+05)                                          
- IDSET PAMB2 (PROPERTIES) (32 *2 <20> )                                         
- LSET PAMB2 (%PAMB2)                                                            
- DSET RUN-STATUS PAMB @PAMB2 (1.01325000D+00 <5> )                              
- IDSET ISODES (PROPERTIES) (123 *5 124 *5 132 *5 1269 *5)                       
- IDSET ISODESHW (PROPERTIES) (123 *5 124 *5 132 *5)                             
- IDSET ISTRCV (PROPERTIES) (1251 *2)                                            
- IDSET ID_WORK (PROPERTIES) (112 *2 <19> 195 *2 <28> )                          
- LSET L_WORK (%ISODESHW %ID_WORK)                                               
- IDSET ID_HEAT (PROPERTIES) (1 *2 <13> 815 *2 <22> 816 *2 <22> )                
- LSET L_HEAT (%ISODESHW %ID_HEAT)                                               
- IDSET ID_LTVC (PROPERTIES) (817 *2 <22> )                                      
- IDSET ID_LQVC (PROPERTIES) (818 *2 <13> )                                      
- IDSET ID_TPQV (PROPERTIES) (1 *2 <13> 31 *2 <22> 32 *2 <20> 2 *2 3 *2)         
- IDSET ID_QTP (PROPERTIES) (1 *2 <13> 31 *2 <22> 32 *2 <20> 3 *2)               
- IDSET TOTAL (PROPERTIES) (524 *2 <10> 525 *2 <10> 526 *2 <10> )                
- IDSET ENERGY (PROPERTIES) (504 *2 <13> 505 *2 <13> 506 *2 <13> 1 *2 <13> )     
- IDSET TOTAX (PROPERTIES) (524 *2 <18> 525 *2 <18> 526 *2 <18> )                
- IDSET ENERGX (PROPERTIES) (504 *2 <5> 505 *2 <5> 506 *2 <5> 1 *2 <5> )         
- LSET BPSBAL3 ( %TOTAL %ENERGY)                                                 
- LSET BPBATCH ( %TOTAX %ENERGX)                                                 
- DSET RUN-STATUS FORSTAT @FORSTAT (2)                                           
- DSET FLWBAL @FLWBAL (0.D0 <3> 0.D0 <3> 0.D0 0.D0 0.D0 <3> 0.D0 3.63797881D-12  
- <3> 3.63797881D-16 -2.16322638D+05 <3> -2.18746104D-02)                        
- DSET ALIAS @ALIAS ( "C2H6O-2" "H2O" )                                          
- IDSET ID_1 (NPOINT) (#2)                                                       
- IDSET ID_2 (PROPERTIES) (339 *6 132 *5 1196 *6 1197 *6 1198 *6)                
- LSET L_1 (%ID_2 & %ID_1)                                                       
- DSET COMPONENTS MAIN COMPS @L_1 ("ETHANOL" C "C2H6O-2" "C2H6O-2" "ETHANOL"     
- "H2O" C "H2O" "H2O" "H2O" )                                                    
- IDSET ID_3 (PROPERTIES) (8 *2 <13> 7 *2 <13> 62 *2 <13> 5 *2 59 *2 6 *2 58 *2  
- 83 *2 9 *2 11 *2 <22> 12 *2 <22> 324 *2 <17> 35 *2)                            
- LSET L_2 (%ID_RXBAL %ID_3)                                                     
- DSET BLOCK DSTWU SHORTCUT BLKSTAT @BLKSTAT (0 0)                               
- DSET BLOCK DSTWU SHORTCUT COMPSTAT @L1 (0)                                     
- DSET BLOCK DSTWU SHORTCUT SYNCSTAT @L1 (0)                                     
- DSET BLOCK DSTWU SHORTCUT BLKIN @BLKIN (1 FEED                                 
- "a026b9f9-dbbd-4a4e-8b03-eaf377eada2e" * )                                     
- DSET BLOCK DSTWU SHORTCUT TYPIN @TYPIN (1 MATERIAL)                            
- DSET BLOCK DSTWU SHORTCUT BLKOUT @BLKOUT (2 DISTILAT RESIDU                    
- "a026b9f9-dbbd-4a4e-8b03-eaf377eada2e" * * )                                   
- DSET BLOCK DSTWU SHORTCUT TYPOUT @TYPOUT (2 MATERIAL MATERIAL)                 
- DSET BLOCK DSTWU SHORTCUT RES_D @L_2 (5.21282467D+02 <3> 5.21282467D+02 <3>    
- 0.D0 <3> 0.D0 1.00000000D+04 <3> 1.00000000D+04 <3> * <3> 3.63797881D-16 * <3> 
- * <3> * <3> * 5.21282467D+02 <3> 5.21282467D+02 <3> 0.D0 <3> 0.D0              
- 1.00000000D+04 <3> 1.00000000D+04 <3> * <3> 3.63797881D-16 -9.88921103D+06 <3> 
- -9.67288839D+06 <3> * <3> -2.18746104D-02 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3>  
- 0.D0 <3> 3.62854071D+05 <3> 5.79176709D+05 <3> * <3> 4.36568783D+00            
- 4.43289499D+00 1.28646719D+01 1.00000000D+02 9.26386666D+01 9.36386666D+01     
- 7.84061726D+01 <4> 9.88297215D+01 <4> * <1> 4.86659664D-02)                    
- IDSET ID_4 (PROPERTIES) (7001 *2 <22> 7002 *2 <20> 8103 *2 <10> 204 *2 <12>    
- 8101 *2 <11> 7003 *2 )                                                         
- LSET L_3 ( %ID_4 )                                                             
- IDSET ID_5 (PROPERTIES) (253 *2)                                               
- IDSET ID_6 (PROPERTIES) (253 *2 <11> )                                         
- IDSET ID_7 (PROPERTIES) (253 *2 <12> )                                         
- IDSET ID_8 (PROPERTIES) (253 *2 <17> )                                         
- IDSET ID_9 (PROPERTIES) (253 *2 <27> )                                         
- IDSET ID_10 (PROPERTIES) (253 *2 <59> )                                        
- IDSET ID_11 (PROPERTIES) (253 *2 <10> )                                        
- IDSET ID_12 (PROPERTIES) (8101 *2 <11> 8002 *2 8103 *2 <10> 8004 *2 )          
- IDSET ID_13 (PROPERTIES) (8001 *2 <11> 8003 *2 <10> 8010 *2 <12> 7001 *2 <22>  
- 7002 *2 <20> 7003 *2 7004 *2 7006 *2 2002 *2 <39> 41142 *2 <40> 41143 *2 <13>  
- 2003 *2 <41> 41144 *2 <42> 11006 *2 <37> 41145 *2 <38> 11007 *2 8005 *2 <12> ) 
- LSET L_4 ( %ISODES (( %ID_NCCNS & %ID_12 %ID_13) & %IDS_1) )                   
- DSET STREAM MATERIAL DISTILAT BLKSTAT @BLKSTAT (0 0)                           
- DSET STREAM MATERIAL DISTILAT COMPSTAT @L1 (0)                                 
- DSET STREAM MATERIAL DISTILAT STR_MAIN @L_4 (SHORTCUT * LIQUID NRTL            
- 1.97554800D+01 <3> 5.61323499D+00 <3> 7.78733965D-01 2.21266035D-01            
- 9.10116000D+02 <3> 1.01124000D+02 <3> 9.00000000D-01 1.00000000D-01            
- 2.53687150D+01 <3> 1.01124000D+03 <3> 2.24411920D+01 <3> 7.84061726D+01 <4>    
- 1.01325000D+00 <5> 0.D0 1.00000000D+00 0.D0 -6.51689080D+04 <3>                
- -1.63487545D+03 <3> -4.59236515D+05 <3> -6.76841587D+01 <3> -1.69797489D+00 <3>
- 1.88408850D-02 <3> 7.51029626D-01 <3> 3.98616958D+01 2.08424751D+01 <3> )      
- DSET STREAM MATERIAL DISTILAT RES_STR @L_3 (7.84061726D+01 <4> 1.01325000D+00  
- <5> 1.01124000D+03 <3> 2.24411920D+01 <3> 2.53687150D+01 <3> 0.D0 )            
- DSET STREAM MATERIAL FEED BLKSTAT @BLKSTAT (0 0)                               
- DSET STREAM MATERIAL FEED COMPSTAT @L1 (0)                                     
- DSET STREAM MATERIAL FEED STR_MAIN @L_4 (* SHORTCUT LIQUID NRTL 2.17065517D+01 
- <3> 4.99575916D+02 <3> 4.16406710D-02 9.58359329D-01 1.00000000D+03 <3>        
- 9.00000000D+03 <3> 1.00000000D-01 9.00000000D-01 5.21282467D+02 <3>            
- 1.00000000D+04 <3> 1.70709244D+02 <3> 2.00000000D+01 <4> 1.02650000D+00 <5>    
- 0.D0 1.00000000D+00 0.D0 -6.82953330D+04 <3> -3.56011597D+03 <3>               
- -9.88921103D+06 <3> -4.09507903D+01 <3> -2.13469290D+00 <3> 5.08937942D-02 <3> 
- 9.76318933D-01 <3> 1.91834574D+01 1.71334567D+02 <3> )                         
- DSET STREAM MATERIAL FEED RES_STR @L_3 (2.00000000D+01 <4> 1.02650000D+00 <5>  
- 1.00000000D+04 <3> 1.70709244D+02 <3> 5.21282467D+02 <3> 0.D0 )                
- DSET STREAM MATERIAL RESIDU BLKSTAT @BLKSTAT (0 0)                             
- DSET STREAM MATERIAL RESIDU COMPSTAT @L1 (0)                                   
- DSET STREAM MATERIAL RESIDU STR_MAIN @L_4 (SHORTCUT * LIQUID NRTL              
- 1.95107170D+00 <3> 4.93962681D+02 <3> 3.93429641D-03 9.96065704D-01            
- 8.98840000D+01 <3> 8.89887600D+03 <3> 9.99959950D-03 9.90000401D-01            
- 4.95913752D+02 <3> 8.98876000D+03 <3> 1.63380309D+02 <3> 9.88297215D+01 <4>    
- 1.01325000D+00 <5> 0.D0 1.00000000D+00 0.D0 -6.68849101D+04 <3>                
- -3.69006924D+03 <3> -9.21365187D+06 <3> -3.50364923D+01 <3> -1.93297834D+00 <3>
- 5.05888944D-02 <3> 9.16956685D-01 <3> 1.81256518D+01 1.50492092D+02 <3> )      
- DSET STREAM MATERIAL RESIDU RES_STR @L_3 (9.88297215D+01 <4> 1.01325000D+00 <5>
- 8.98876000D+03 <3> 1.63380309D+02 <3> 4.95913752D+02 <3> 0.D0 )                
- IDSET ID_14 (PROPERTIES) (757 *1)                                              
- IDSET ID_15 (PROPERTIES) (36 *2 37 *2 38 *2 39 *2 8103 *2 <10> )               
- LSET L_5 ( %ID_NCCNS & %ID_15 %ID_14)                                          
- DSET STREAM MATERIAL DISTILAT STRM_XY @L_5 ( 7.78733965D-01 2.21266035D-01     
- 7.78733965D-01 2.21266035D-01 0.D0 0.D0 0.D0 0.D0 9.10116000D+02 <3>           
- 1.01124000D+02 <3> * )                                                         
- DSET STREAM MATERIAL FEED STRM_XY @L_5 ( 4.16406710D-02 9.58359329D-01         
- 4.16406710D-02 9.58359329D-01 0.D0 0.D0 0.D0 0.D0 1.00000000D+03 <3>           
- 9.00000000D+03 <3> 0 )                                                         
- DSET STREAM MATERIAL RESIDU STRM_XY @L_5 ( 3.93429641D-03 9.96065704D-01       
- 3.93429641D-03 9.96065704D-01 0.D0 0.D0 0.D0 0.D0 8.98840000D+01 <3>           
- 8.89887600D+03 <3> * )                                                         
- IDSET ID_16 (PROPERTIES) (64 *2 <11> 63 *2 <11> 94 *2 <11> 95 *2 <11> 88 *2    
- <39> 61 *2 <39> 89 *2 <39> 90 *2 <39> 991 *2 <7> 992 *2 <7> 993 *2 <7> 994 *2  
- <7> 926 *2 <37> 925 *2 <37> 995 *2 <37> 996 *2 <37> 928 *2 927 *2 997 *2 998   
- *2 2 *2 3 *2 606 *2 <11> 103 *2 <12> 269 *2 1246 *2 <10> 1247 *2 <10> 1248 *2  
- <12> 1249 *2 <12> 8010 *2 <12> 7007 *2 7008 *2 )                               
- LSET L_6 ( %ID_16)                                                             
- DSET STREAM MATERIAL DISTILAT STR_PHAS @L_6 ( 0.D0 <3> 2.53687150D+01 <3>      
- 2.53687150D+01 <3> 0.D0 <3> -5.56375155D+04 <3> -6.51689080D+04 <3> 0.D0 <3> * 
- <3> -4.19423967D+01 <3> -6.76841587D+01 <3> 0.D0 <3> 0.D0 <3> 3.46652732D-05   
- <3> 1.88408850D-02 <3> * <3> * <3> 4.06224517D+01 3.98616958D+01               
- 4.60690400D+01 4.60690400D+01 0.D0 1.00000000D+00 2.53687150D+01 <3>           
- 2.08424751D+01 <3> 3.98616958D+01 0.D0 <3> 1.01124000D+03 <3> 0.D0 <3>         
- 2.24411920D+01 <3> 2.24411920D+01 <3> 0.D0 0.D0 )                              
- DSET STREAM MATERIAL FEED STR_PHAS @L_6 ( 0.D0 <3> 5.21282467D+02 <3>          
- 5.21282467D+02 <3> 0.D0 <3> * <3> -6.82953330D+04 <3> -6.82953330D+04 <3> * <3>
- * <3> -4.09507903D+01 <3> -4.09507903D+01 <3> * <3> * <3> 5.08937942D-02 <3>   
- 5.08937942D-02 <3> * <3> * 1.91834574D+01 1.91834574D+01 * 0.D0 1.00000000D+00 
- 5.21282467D+02 <3> 1.71334567D+02 <3> 1.91834574D+01 0.D0 <3> 1.00000000D+04   
- <3> * <3> 1.70709244D+02 <3> 1.70709244D+02 <3> 0.D0 0.D0 )                    
- DSET STREAM MATERIAL RESIDU STR_PHAS @L_6 ( 0.D0 <3> 4.95913752D+02 <3>        
- 4.95913752D+02 <3> 0.D0 <3> -5.70572980D+04 <3> -6.68849101D+04 <3> 0.D0 <3> * 
- <3> -1.03277860D+01 <3> -3.50364923D+01 <3> 0.D0 <3> 0.D0 <3> 3.27619761D-05   
- <3> 5.05888944D-02 <3> * <3> * <3> 1.92876424D+01 1.81256518D+01               
- 1.91834574D+01 * 0.D0 1.00000000D+00 4.95913752D+02 <3> 1.50492092D+02 <3>     
- 1.81256518D+01 0.D0 <3> 8.98876000D+03 <3> 0.D0 <3> 1.63380309D+02 <3>         
- 1.63380309D+02 <3> 0.D0 0.D0 )                                                 
- IDSET ID_17 (PROPERTIES) (8103 *2 <10> 1265 *2 <10> )                          
- IDSET ID_18 (HIER-ID) ( PLANT )                                                
- IDSET ID_19 (STREAM-ID) ( FEED )                                               
- LSET L_7 ( %ID_18 & %ID_17 & %ID_19)                                           
- DSET UTIL-SUMMARY FEEDSUM @L_7 ( 1.00000000D+04 <3> 0.D0 <3> )                 
- IDSET ID_20 (HIER-ID) ( PLANT )                                                
- IDSET ID_21 (STREAM-ID) ( DISTILAT RESIDU )                                    
- LSET L_8 ( %ID_20 & %ID_17 & %ID_21)                                           
- DSET UTIL-SUMMARY PRODSUM @L_8 ( 1.01124000D+03 <3> 0.D0 <3> 8.98876000D+03 <3>
- 0.D0 <3> )                                                                     
- IDSET ID_22 (PROPERTIES) ( 1266 *2 <10> 1267 *2 <10> 1262 *2 <10> 1263 *2 <10> 
- 1264 *2 <10> 1268 *2 <119> )                                                   
- LSET L_9 ( %ID_22)                                                             
- DSET UTIL-SUMMARY PLANTSUM @L_9 ( 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 
- 0.D0 <3> )                                                                     
- IDSET ID_23 (HIER-ID) ( PLANT )                                                
- LSET L_10 ( %ID_23 & %ID_22)                                                   
- DSET UTIL-SUMMARY HIERSUM @L_10 ( 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 
- 0.D0 <3> )                                                                     
- IDSET RSTAT (PROPERTIES) (739 *1)                                              
- LSET RSTAT ( %RSTAT)                                                           
- DSET RUN-STATUS RPTSTAT @RSTAT (0)                                             
- IDSET ID_24 (PROPERTIES) (7002 *2 <20> )                                       
- IDSET ID_25 ( PROPERTIES, COMPONENTS) (8002 *2 , "ETHANOL" )                   
- IDSET ID_26 ( PROPERTIES, PHASE) (7001 *2 <22> , TOTAL )                       
- IDSET ID_27 ( PROPERTIES,  PHASE, COMPONENTS) (6001 *2 , TOTAL , "ETHANOL"     
- 6001 *2 , TOTAL , "H2O" 2010 *2 , LIQUID1 , "ETHANOL" 2010 *2 , LIQUID1 ,      
- "H2O" 2010 *2 , LIQUID2 , "ETHANOL" 2010 *2 , LIQUID2 , "H2O" 6002 *2 , TOTAL  
- , "ETHANOL" 6002 *2 , TOTAL , "H2O" )                                          
- IDSET ID_28 ( PROPERTIES, PHASE) (7005 *2 , TOTAL )                            
- IDSET ID_29 ( PROPERTIES,  PHASE, COMPONENTS) (8002 *2 , VAPOR , "ETHANOL"     
- 8002 *2 , VAPOR , "H2O" 8002 *2 , LIQUID1 , "ETHANOL" 8002 *2 , LIQUID1 ,      
- "H2O" 8002 *2 , LIQUID2 , "ETHANOL" 8002 *2 , LIQUID2 , "H2O" )                
- IDSET ID_30 (NPOINT) ( #51)                                                    
- LSET L_11 ((%IDERR %ID_24 %ID_25 %ID_26 %ID_27 %ID_28 %ID_29) & %ID_30)        
- DSET PROP-TABLE FLASHCURVE BINRY-3 PROPTAB @L_11 (0 1.01320000D+00 <5> 0.D0    
- 1.00016452D+02 <4> 1.23382834D+01 9.99999901D-01 5.56528326D+00 1.00000000D+00 
- * * * * 1.00000000D+00 0.D0 1.00000000D+00 0.D0 1.00000000D+00 * * 0           
- 1.01320000D+00 <5> 2.00000000D-02 9.50003174D+01 <4> 9.09059739D+00            
- 8.34885718D-01 4.88028570D+00 1.00120142D+00 * * * * 1.00000000D+00            
- 1.81811952D-01 8.18188048D-01 2.00000000D-02 9.80000000D-01 * * 0              
- 1.01320000D+00 <5> 4.00000000D-02 9.17316273D+01 <4> 7.19378735D+00            
- 7.41925493D-01 4.33925748D+00 1.00462293D+00 * * * * 1.00000000D+00            
- 2.87751503D-01 7.12248497D-01 4.00000000D-02 9.60000000D-01 * * 0              
- 1.01320000D+00 <5> 6.00000000D-02 8.94446828D+01 <4> 5.94840066D+00            
- 6.84144609D-01 3.89858582D+00 1.01005348D+00 * * * * 1.00000000D+00            
- 3.56904051D-01 6.43095949D-01 6.00000000D-02 9.40000000D-01 * * 0              
- 1.01320000D+00 <5> 8.00000000D-02 8.77693128D+01 <4> 5.06797114D+00            
- 6.46263371D-01 3.53259063D+00 1.01733336D+00 * * * * 1.00000000D+00            
- 4.05437696D-01 5.94562304D-01 8.00000000D-02 9.20000000D-01 * * 0              
- 1.01320000D+00 <5> 1.00000000D-01 8.65004750D+01 <4> 4.41295792D+00            
- 6.20782439D-01 3.22437942D+00 1.02633422D+00 * * * * 1.00000000D+00            
- 4.41295801D-01 5.58704199D-01 1.00000000D-01 9.00000000D-01 * * 0              
- 1.01320000D+00 <5> 1.20000000D-01 8.55140087D+01 <4> 3.90710504D+00            
- 6.03576568D-01 2.96206353D+00 1.03694934D+00 * * * * 1.00000000D+00            
- 4.68852618D-01 5.31147382D-01 1.20000000D-01 8.80000000D-01 * * 0              
- 1.01320000D+00 <5> 1.40000000D-01 8.47298807D+01 <4> 3.50515858D+00            
- 5.92183469D-01 2.73689353D+00 1.04908812D+00 * * * * 1.00000000D+00            
- 4.90722216D-01 5.09277784D-01 1.40000000D-01 8.60000000D-01 * * 0              
- 1.01320000D+00 <5> 1.60000000D-01 8.40940906D+01 <4> 3.17853812D+00            
- 5.85040342D-01 2.54222463D+00 1.06267255D+00 * * * * 1.00000000D+00            
- 5.08566113D-01 4.91433887D-01 1.60000000D-01 8.40000000D-01 * * 0              
- 1.01320000D+00 <5> 1.80000000D-01 8.35689318D+01 <4> 2.90829164D+00            
- 5.81106699D-01 2.37289175D+00 1.07763479D+00 * * * * 1.00000000D+00            
- 5.23492508D-01 4.76507492D-01 1.80000000D-01 8.20000000D-01 * * 0              
- 1.01320000D+00 <5> 2.00000000D-01 8.31273768D+01 <4> 2.68134842D+00            
- 5.79662882D-01 2.22480745D+00 1.09391536D+00 * * * * 1.00000000D+00            
- 5.36269696D-01 4.63730304D-01 2.00000000D-01 8.00000000D-01 * * 0              
- 1.01320000D+00 <5> 2.20000000D-01 8.27496600D+01 <4> 2.48839768D+00            
- 5.80195516D-01 2.09469058D+00 1.11146183D+00 * * * * 1.00000000D+00            
- 5.47447499D-01 4.52552501D-01 2.20000000D-01 7.80000000D-01 * * 0              
- 1.01320000D+00 <5> 2.40000000D-01 8.24211017D+01 <4> 2.32262480D+00            
- 5.82329004D-01 1.97987610D+00 1.13022772D+00 * * * * 1.00000000D+00            
- 5.57429958D-01 4.42570042D-01 2.40000000D-01 7.60000000D-01 * * 0              
- 1.01320000D+00 <5> 2.60000000D-01 8.21306724D+01 <4> 2.17892593D+00            
- 5.85782777D-01 1.87817791D+00 1.15017163D+00 * * * * 1.00000000D+00            
- 5.66520746D-01 4.33479254D-01 2.60000000D-01 7.40000000D-01 * * 0              
- 1.01320000D+00 <5> 2.80000000D-01 8.18700142D+01 <4> 2.05340205D+00            
- 5.90343643D-01 1.78778737D+00 1.17125656D+00 * * * * 1.00000000D+00            
- 5.74952578D-01 4.25047422D-01 2.80000000D-01 7.20000000D-01 * * 0              
- 1.01320000D+00 <5> 3.00000000D-01 8.16327580D+01 <4> 1.94302287D+00            
- 5.95847341D-01 1.70719697D+00 1.19344925D+00 * * * * 1.00000000D+00            
- 5.82906862D-01 4.17093138D-01 3.00000000D-01 7.00000000D-01 * * 0              
- 1.01320000D+00 <5> 3.20000000D-01 8.14140342D+01 <4> 1.84539745D+00            
- 6.02165905D-01 1.63514179D+00 1.21671977D+00 * * * * 1.00000000D+00            
- 5.90527185D-01 4.09472815D-01 3.20000000D-01 6.80000000D-01 * * 0              
- 1.01320000D+00 <5> 3.40000000D-01 8.12101175D+01 <4> 1.75861410D+00            
- 6.09198796D-01 1.57055403D+00 1.24104097D+00 * * * * 1.00000000D+00            
- 5.97928795D-01 4.02071205D-01 3.40000000D-01 6.60000000D-01 * * 0              
- 1.01320000D+00 <5> 3.60000000D-01 8.10181636D+01 <4> 1.68112613D+00            
- 6.16866551D-01 1.51252742D+00 1.26638819D+00 * * * * 1.00000000D+00            
- 6.05205407D-01 3.94794593D-01 3.60000000D-01 6.40000000D-01 * * 0              
- 1.01320000D+00 <5> 3.80000000D-01 8.08360012D+01 <4> 1.61166824D+00            
- 6.25105887D-01 1.46028885D+00 1.29273887D+00 * * * * 1.00000000D+00            
- 6.12434556D-01 3.87565444D-01 3.80000000D-01 6.20000000D-01 * * 0              
- 1.01320000D+00 <5> 4.00000000D-01 8.06620402D+01 <4> 1.54919890D+00            
- 6.33867750D-01 1.41317571D+00 1.32007233D+00 * * * * 1.00000000D+00            
- 6.19679245D-01 3.80320755D-01 4.00000000D-01 6.00000000D-01 * * 0              
- 1.01320000D+00 <5> 4.20000000D-01 8.04950544D+01 <4> 1.49284800D+00            
- 6.43112142D-01 1.37061765D+00 1.34836942D+00 * * * * 1.00000000D+00            
- 6.26994361D-01 3.73005639D-01 4.20000000D-01 5.80000000D-01 * * 0              
- 1.01320000D+00 <5> 4.40000000D-01 8.03340998D+01 <4> 1.44188297D+00            
- 6.52806238D-01 1.33212171D+00 1.37761232D+00 * * * * 1.00000000D+00            
- 6.34428506D-01 3.65571494D-01 4.40000000D-01 5.60000000D-01 * * 0              
- 1.01320000D+00 <5> 4.60000000D-01 8.01786434D+01 <4> 1.39569306D+00            
- 6.62928134D-01 1.29726011D+00 1.40778441D+00 * * * * 1.00000000D+00            
- 6.42018807D-01 3.57981193D-01 4.60000000D-01 5.40000000D-01 * * 0              
- 1.01320000D+00 <5> 4.80000000D-01 8.00282419D+01 <4> 1.35375315D+00            
- 6.73458632D-01 1.26566035D+00 1.43886999D+00 * * * * 1.00000000D+00            
- 6.49801510D-01 3.50198490D-01 4.80000000D-01 5.20000000D-01 * * 0              
- 1.01320000D+00 <5> 5.00000000D-01 7.98826451D+01 <4> 1.31561583D+00            
- 6.84384175D-01 1.23699690D+00 1.47085415D+00 * * * * 1.00000000D+00            
- 6.57807911D-01 3.42192089D-01 5.00000000D-01 5.00000000D-01 * * 0              
- 1.01320000D+00 <5> 5.20000000D-01 7.97417325D+01 <4> 1.28089664D+00            
- 6.95695316D-01 1.21098431D+00 1.50372260D+00 * * * * 1.00000000D+00            
- 6.66066247D-01 3.33933753D-01 5.20000000D-01 4.80000000D-01 * * 0              
- 1.01320000D+00 <5> 5.40000000D-01 7.96054857D+01 <4> 1.24926367D+00            
- 7.07386136D-01 1.18737150D+00 1.53746155D+00 * * * * 1.00000000D+00            
- 6.74602376D-01 3.25397624D-01 5.40000000D-01 4.60000000D-01 * * 0              
- 1.01320000D+00 <5> 5.60000000D-01 7.94739676D+01 <4> 1.22042918D+00            
- 7.19453785D-01 1.16593695D+00 1.57205757D+00 * * * * 1.00000000D+00            
- 6.83440333D-01 3.16559667D-01 5.60000000D-01 4.40000000D-01 * * 0              
- 1.01320000D+00 <5> 5.80000000D-01 7.93473049D+01 <4> 1.19414276D+00            
- 7.31898107D-01 1.14648463D+00 1.60749747D+00 * * * * 1.00000000D+00            
- 6.92602793D-01 3.07397207D-01 5.80000000D-01 4.20000000D-01 * * 0              
- 1.01320000D+00 <5> 6.00000000D-01 7.92256752D+01 <4> 1.17018578D+00            
- 7.44721347D-01 1.12884059D+00 1.64376817D+00 * * * * 1.00000000D+00            
- 7.02111459D-01 2.97888541D-01 6.00000000D-01 4.00000000D-01 * * 0              
- 1.01320000D+00 <5> 6.20000000D-01 7.91092956D+01 <4> 1.14836677D+00            
- 7.57927919D-01 1.11285001D+00 1.68085662D+00 * * * * 1.00000000D+00            
- 7.11987389D-01 2.88012611D-01 6.20000000D-01 3.80000000D-01 * * 0              
- 1.01320000D+00 <5> 6.40000000D-01 7.89984147D+01 <4> 1.12851764D+00            
- 7.71524212D-01 1.09837480D+00 1.71874969D+00 * * * * 1.00000000D+00            
- 7.22251282D-01 2.77748718D-01 6.40000000D-01 3.60000000D-01 * * 0              
- 1.01320000D+00 <5> 6.60000000D-01 7.88933055D+01 <4> 1.11049050D+00            
- 7.85518450D-01 1.08529140D+00 1.75743407D+00 * * * * 1.00000000D+00            
- 7.32923726D-01 2.67076274D-01 6.60000000D-01 3.40000000D-01 * * 0              
- 1.01320000D+00 <5> 6.80000000D-01 7.87942601D+01 <4> 1.09415503D+00            
- 7.99920579D-01 1.07348901D+00 1.79689617D+00 * * * * 1.00000000D+00            
- 7.44025414D-01 2.55974586D-01 6.80000000D-01 3.20000000D-01 * * 0              
- 1.01320000D+00 <5> 7.00000000D-01 7.87015858D+01 <4> 1.07939621D+00            
- 8.14742178D-01 1.06286804D+00 1.83712205D+00 * * * * 1.00000000D+00            
- 7.55577346D-01 2.44422654D-01 7.00000000D-01 3.00000000D-01 * * 0              
- 1.01320000D+00 <5> 7.20000000D-01 7.86156019D+01 <4> 1.06611251D+00            
- 8.29996415D-01 1.05333872D+00 1.87809732D+00 * * * * 1.00000000D+00            
- 7.67601004D-01 2.32398996D-01 7.20000000D-01 2.80000000D-01 * * 0              
- 1.01320000D+00 <5> 7.40000000D-01 7.85366368D+01 <4> 1.05421422D+00            
- 8.45697988D-01 1.04481997D+00 1.91980704D+00 * * * * 1.00000000D+00            
- 7.80118523D-01 2.19881477D-01 7.40000000D-01 2.60000000D-01 * * 0              
- 1.01320000D+00 <5> 7.60000000D-01 7.84650464D+01 <4> 1.04362297D+00            
- 8.61863805D-01 1.03723837D+00 1.96223570D+00 * * * * 1.00000000D+00            
- 7.93152317D-01 2.06847683D-01 7.60000000D-01 2.40000000D-01 * * 0              
- 1.01320000D+00 <5> 7.80000000D-01 7.84011319D+01 <4> 1.03426724D+00            
- 8.78510163D-01 1.03052730D+00 2.00536703D+00 * * * * 1.00000000D+00            
- 8.06727478D-01 1.93272522D-01 7.80000000D-01 2.20000000D-01 * * 0              
- 1.01320000D+00 <5> 8.00000000D-01 7.83452630D+01 <4> 1.02608648D+00            
- 8.95657076D-01 1.02462614D+00 2.04918404D+00 * * * * 1.00000000D+00            
- 8.20868370D-01 1.79131630D-01 8.00000000D-01 2.00000000D-01 * * 0              
- 1.01320000D+00 <5> 8.20000000D-01 7.82977924D+01 <4> 1.01902677D+00            
- 9.13325363D-01 1.01947964D+00 2.09366884D+00 * * * * 1.00000000D+00            
- 8.35601279D-01 1.64398721D-01 8.20000000D-01 1.80000000D-01 * * 0              
- 1.01320000D+00 <5> 8.40000000D-01 7.82590775D+01 <4> 1.01304100D+00            
- 9.31537433D-01 1.01503730D+00 2.13880261D+00 * * * * 1.00000000D+00            
- 8.50953903D-01 1.49046097D-01 8.40000000D-01 1.60000000D-01 * * 0              
- 1.01320000D+00 <5> 8.60000000D-01 7.82294805D+01 <4> 1.00808828D+00            
- 9.50317336D-01 1.01125286D+00 2.18456552D+00 * * * * 1.00000000D+00            
- 8.66955502D-01 1.33044498D-01 8.60000000D-01 1.40000000D-01 * * 0              
- 1.01320000D+00 <5> 8.80000000D-01 7.82093678D+01 <4> 1.00413338D+00            
- 9.69690824D-01 1.00808385D+00 2.23093660D+00 * * * * 1.00000000D+00            
- 8.83637057D-01 1.16362943D-01 8.80000000D-01 1.20000000D-01 * * 0              
- 1.01320000D+00 <5> 9.00000000D-01 7.81991112D+01 <4> 1.00114629D+00            
- 9.89685423D-01 1.00549119D+00 2.27789371D+00 * * * * 1.00000000D+00            
- 9.01031433D-01 9.89685670D-02 9.00000000D-01 1.00000000D-01 * * 0              
- 1.01320000D+00 <5> 9.20000000D-01 7.81990874D+01 <4> 9.99101850D-01            
- 1.01033052D+00 1.00343881D+00 2.32541342D+00 * * * * 1.00000000D+00            
- 9.19173546D-01 8.08264537D-02 9.20000000D-01 8.00000000D-02 * * 0              
- 1.01320000D+00 <5> 9.40000000D-01 7.82096795D+01 <4> 9.97979408D-01            
- 1.03165745D+00 1.00189337D+00 2.37347094D+00 * * * * 1.00000000D+00            
- 9.38100548D-01 6.18994520D-02 9.40000000D-01 6.00000000D-02 * * 0              
- 1.01320000D+00 <5> 9.60000000D-01 7.82312766D+01 <4> 9.97762565D-01            
- 1.05369961D+00 1.00082392D+00 2.42204004D+00 * * * * 1.00000000D+00            
- 9.57852014D-01 4.21479861D-02 9.60000000D-01 4.00000000D-02 * * 0              
- 1.01320000D+00 <5> 9.80000000D-01 7.82642750D+01 <4> 9.98438943D-01            
- 1.07649260D+00 1.00020174D+00 2.47109293D+00 * * * * 1.00000000D+00            
- 9.78470148D-01 2.15298521D-02 9.80000000D-01 2.00000000D-02 * * 0              
- 1.01320000D+00 <5> 1.00000000D+00 7.83090773D+01 <4> 9.99999937D-01            
- 1.10007422D+00 1.00000000D+00 2.52060021D+00 * * * * 1.00000000D+00            
- 1.00000000D+00 0.D0 1.00000000D+00 0.D0 * * )                                  
- DSET PROP-TABLE FLASHCURVE BINRY-3 COMPSTAT @L_1 (0)                           
- DSET RUN-STATUS PPSTAT @PPSTAT (0)                                             
- DSET RUN-STATUS OLDSTAT @STATUS ( 0 2 2 2 0 0 )                                
- DSET RUN-STATUS STATUS @STATUS ( 8 * * * * * )                                 
- DSET RUN-STATUS COMPSTAT @L_1 (0)                                              
- IDSET TSTAT (PROPERTIES) (741 *1)                                              
- LSET TSTAT ( %TSTAT)                                                           
- DSET RUN-STATUS TOTSTAT @TSTAT (0)                                             
- DSET SPSTAT @SPSTAT (0)                                                        
+SCALE 0.014148
 $_ADS_FILE
-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
+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
 $_END_ADS_FILE
